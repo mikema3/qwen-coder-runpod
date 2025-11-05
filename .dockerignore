@@ -1,0 +1,20 @@
+# Git
+.git/
+.github/
+.gitignore
+
+# Documentation
+*.md
+LICENSE
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
