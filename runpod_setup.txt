@@ -1,0 +1,11 @@
+
+1. https://console.runpod.io/serverless 
+New Endpoint 
+choose from docker image. 
+
+2. container configuration
+mikema3/qwen-coder-runpod:latest 
+
+
+get the api. 
+https://console.runpod.io/user/settings

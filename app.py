@@ -1,16 +1,13 @@
 """
-Qwen2.5-Coder-7B FastAPI Server for RunPod
-Serves code completion and chat endpoints using Qwen2.5-Coder-7B model
+Qwen2.5-Coder-7B Handler for RunPod Serverless
+Processes code completion and chat requests using Qwen2.5-Coder-7B model
 """
 import os
 import logging
-from typing import List, Dict, Any, Optional
-from contextlib import asynccontextmanager
+from typing import Dict, Any, Optional, List
 
 import torch
-import uvicorn
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field
+import runpod
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # Configure logging

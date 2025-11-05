@@ -27,7 +27,7 @@ COPY requirements.txt .
 RUN pip3 install --no-cache-dir -r requirements.txt
 
 # Copy application code
-COPY app.py .
+COPY app_runpod.py app.py
 
 # Pre-download the model at build time (optional, makes startup faster)
 # Uncomment if you want model baked into image
@@ -45,5 +45,5 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=120s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
-# Start the application
+# Start the RunPod serverless handler
 CMD ["python3", "app.py"]
